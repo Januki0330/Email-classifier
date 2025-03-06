@@ -11,6 +11,7 @@ A machine learning project to detect spam emails using a Naive Bayes model train
 - **Evaluation**: Generates a confusion matrix and detailed metrics (accuracy, precision, recall, F1-score).
 
 ## Project Structure
+```
 Email-classifier/
 ├── data/
 │   └── spambase.data         # UCI Spambase dataset (downloaded separately)
@@ -24,7 +25,7 @@ Email-classifier/
 ├── README.md                # Project documentation (this file)
 ├── requirements.txt         # List of Python dependencies
 └── .gitignore               # Excludes unnecessary files from version control
-
+```
 
 ## Setup
 1. **Clone the Repository**:
