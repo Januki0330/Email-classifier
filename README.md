@@ -1,7 +1,7 @@
 
 # Spam Email Classifier
 
-A machine learning project to detect spam emails using a Naive Bayes model trained on the UCI Spambase dataset. This project demonstrates skills in data preprocessing, model training, evaluation, and custom feature extraction for email classification, making it a strong addition to any data science or ML portfolio.
+Developed a machine learning-based spam email classifier using Python and the UCI Spambase dataset. Trained a Multinomial Naive Bayes model to achieve ~95% F1-score in distinguishing spam from legitimate emails. Implemented two prediction methods: manual feature input using predefined 57-feature vectors and raw text processing with custom feature extraction (word frequencies, character counts, capital run analysis) built with regex and Python. Visualized model performance with a seaborn confusion matrix and packaged the project in a GitHub repository with clear documentation. Future enhancements include Gmail API integration for real-time email classification.
 
 ## Features
 - **Training**: Multinomial Naive Bayes model trained on the UCI Spambase dataset, achieving ~95% F1-score.
