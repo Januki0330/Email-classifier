@@ -87,8 +87,11 @@ Evaluation Visualization: Check confusion_matrix.png in src/ for a graphical bre
 
 **How It Works**
 Dataset: The UCI Spambase dataset contains 4601 email samples with 57 pre-extracted features (e.g., frequency of "free," "!", capital run lengths) and a binary label (0 = ham, 1 = spam).
+
 Model: Multinomial Naive Bayes, chosen for its effectiveness with frequency-based data.
+
 Manual Prediction: Uses a predefined 57-feature vector to match Spambase’s format.
+
 Text Prediction: Custom feature extraction converts raw text into the 57 features required by the model, including word frequencies (e.g., "money"), character frequencies (e.g., "!"), and capital run statistics.
 
 Example Output
@@ -103,38 +106,43 @@ Text Input: Win a FREE iPhone NOW! Click here!!!
 Prediction: Spam
 ```
 
-Future Enhancements
+## Future Enhancements
 API Integration: Add Gmail API or Microsoft Graph API to fetch and classify real emails from an inbox.
+
 Model Comparison: Experiment with alternative algorithms (e.g., Logistic Regression, SVM, or BERT).
+
 Deployment: Create a Flask web app for an interactive demo of spam detection.
+
 Improved Text Processing: Use NLP tools (e.g., NLTK stemming) for more accurate feature extraction.
 
 
-Requirements
+**Requirements**
 Python 3.6+
 Dependencies listed in requirements.txt:
-text
+```text
 
 pandas
 scikit-learn
 matplotlib
 seaborn
+```
 
-Installation Notes
+## Installation Notes
 
 Ensure spambase.data is in data/ before running train.py.
 Run scripts from the project root or adjust file paths in the code if needed.
 
-Limitations
+## Limitations
 
 Text Prediction Accuracy: The raw text method approximates Spambase features, so real-world email performance may differ from the training dataset.
+
 Static Features: Limited to the 57 features defined by Spambase (e.g., no URL detection or sender analysis yet).
 Contributing
 Feel free to fork this repository, submit pull requests, or suggest improvements via issues!
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details (create one if desired).
 
-Author
-Januki Manage (optional: add GitHub link, email, etc.)
+## Author
+Januki Manage
 Created: March 2025
