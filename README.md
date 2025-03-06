@@ -29,9 +29,9 @@ Email-classifier/
 ## Setup
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/<your-username>/spam-email-classifier.git
+   git clone https://github.com/Januki0330/spam-email-classifier.git
    cd spam-email-classifier
-Replace <your-username> with your GitHub username.
+
 
 Install Dependencies:
 ```bash
@@ -39,13 +39,13 @@ pip install -r requirements.txt
 ```
 Required libraries include pandas, scikit-learn, matplotlib, and seaborn.
 
-Download the Dataset:
+2. **Download the Dataset**:
 
 Download spambase.data from the UCI Spambase Dataset.
 Place it in the data/ directory.
 
-Usage
-1. Train the Model
+## Usage
+1. **Train the Model**
 Train the Naive Bayes model and save it as model.pkl:
 
 ```bash
@@ -55,16 +55,18 @@ Outputs:
 Performance metrics (e.g., precision, recall, F1-score).
 A confusion matrix saved as confusion_matrix.png in src/.
 
-2. Predict with Manual Feature Input
+2. **Predict with Manual Feature Input**
 Classify an email using a hardcoded 57-feature vector:
 
-bash
+```bash
 
 python src/predict_manual.py
+
+```
 Example: Sets word_freq_free to 1.0 and word_freq_money to 0.5 to simulate spam-like features.
 Output: "Spam" or "Ham".
 
-3. Predict with Raw Text
+3. **Predict with Raw Text**
 Process raw email text into Spambase features and classify:
 
 ```bash
@@ -75,15 +77,15 @@ Prompts you to enter email text (e.g., "Win a FREE iPhone NOW! Click here!!!").
 Extracts features like word frequencies, character frequencies, and capital run lengths.
 Output: The input text and its prediction ("Spam" or "Ham").
 
-Results
+## Results
 
-Training Performance:
+**Training Performance**:
 
 Accuracy: ~95% on the Spambase test set.
 F1-Score: ~0.95 for ham, ~0.89 for spam (exact values may vary slightly).
 Evaluation Visualization: Check confusion_matrix.png in src/ for a graphical breakdown of predictions.
 
-How It Works
+**How It Works**
 Dataset: The UCI Spambase dataset contains 4601 email samples with 57 pre-extracted features (e.g., frequency of "free," "!", capital run lengths) and a binary label (0 = ham, 1 = spam).
 Model: Multinomial Naive Bayes, chosen for its effectiveness with frequency-based data.
 Manual Prediction: Uses a predefined 57-feature vector to match Spambase’s format.
@@ -91,15 +93,15 @@ Text Prediction: Custom feature extraction converts raw text into the 57 feature
 
 Example Output
 Manual Prediction
-text
-
+```text
 Prediction: Spam
 Text Prediction
-text
+```
+```text
 
 Text Input: Win a FREE iPhone NOW! Click here!!!
 Prediction: Spam
-
+```
 
 Future Enhancements
 API Integration: Add Gmail API or Microsoft Graph API to fetch and classify real emails from an inbox.
