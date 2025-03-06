@@ -36,16 +36,15 @@ Replace <your-username> with your GitHub username.
 Install Dependencies:
 bash
 
-Collapse
-
-Wrap
-
-Copy
 pip install -r requirements.txt
+
 Required libraries include pandas, scikit-learn, matplotlib, and seaborn.
+
 Download the Dataset:
+
 Download spambase.data from the UCI Spambase Dataset.
 Place it in the data/ directory.
+
 Usage
 1. Train the Model
 Train the Naive Bayes model and save it as model.pkl:
@@ -62,11 +61,6 @@ Classify an email using a hardcoded 57-feature vector:
 
 bash
 
-Collapse
-
-Wrap
-
-Copy
 python src/predict_manual.py
 Example: Sets word_freq_free to 1.0 and word_freq_money to 0.5 to simulate spam-like features.
 Output: "Spam" or "Ham".
